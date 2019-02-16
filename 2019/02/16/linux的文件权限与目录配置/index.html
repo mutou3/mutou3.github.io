@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="#基础部分分区hd 硬盘  hda hdb hdc 表示abc 三个硬盘sata 硬盘  sd  sda sdb sdc 表示abc 三个硬盘hda1 hda2 hda3 表示第一个硬盘的1、2、3分区sda1 sda2 sda3 表示第一个硬盘的1、2、3分区 挂载点：windows 分区，必须给每一个分区分配一个盘符；才能够看到及使用该分区。 在linux下自由/可以当盘符，所以其他的分区，都">
-<meta name="keywords" content="初学者">
+  <meta name="description" content="文件权限与目录配置用户的信息保存在/etc/passwd文件中用户的密码存放在/etc/shadow用户组的信息存放在/etc/grouplinux中系统是根据 uid来识别用户的，每一个用户对应一个uid 环境变量 ls -l 以长模式的形式查看目录下的文件。 第一列为权限第二列为文件的硬链接数第三列 为文件的所有者第四列 为文件的所属组文件以：- 普通文件 d: 目录 b：设备文件（块设备：可">
+<meta name="keywords" content="权限与目录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux学习">
-<meta property="og:url" content="http://yoursite.com/2018/09/21/linux基础/index.html">
+<meta property="og:title" content="文件权限与目录配置">
+<meta property="og:url" content="http://yoursite.com/2019/02/16/linux的文件权限与目录配置/index.html">
 <meta property="og:site_name" content="爱自由">
-<meta property="og:description" content="#基础部分分区hd 硬盘  hda hdb hdc 表示abc 三个硬盘sata 硬盘  sd  sda sdb sdc 表示abc 三个硬盘hda1 hda2 hda3 表示第一个硬盘的1、2、3分区sda1 sda2 sda3 表示第一个硬盘的1、2、3分区 挂载点：windows 分区，必须给每一个分区分配一个盘符；才能够看到及使用该分区。 在linux下自由/可以当盘符，所以其他的分区，都">
+<meta property="og:description" content="文件权限与目录配置用户的信息保存在/etc/passwd文件中用户的密码存放在/etc/shadow用户组的信息存放在/etc/grouplinux中系统是根据 uid来识别用户的，每一个用户对应一个uid 环境变量 ls -l 以长模式的形式查看目录下的文件。 第一列为权限第二列为文件的硬链接数第三列 为文件的所有者第四列 为文件的所属组文件以：- 普通文件 d: 目录 b：设备文件（块设备：可">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-16T15:10:40.914Z">
+<meta property="og:updated_time" content="2019-02-16T15:52:09.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux学习">
-<meta name="twitter:description" content="#基础部分分区hd 硬盘  hda hdb hdc 表示abc 三个硬盘sata 硬盘  sd  sda sdb sdc 表示abc 三个硬盘hda1 hda2 hda3 表示第一个硬盘的1、2、3分区sda1 sda2 sda3 表示第一个硬盘的1、2、3分区 挂载点：windows 分区，必须给每一个分区分配一个盘符；才能够看到及使用该分区。 在linux下自由/可以当盘符，所以其他的分区，都">
+<meta name="twitter:title" content="文件权限与目录配置">
+<meta name="twitter:description" content="文件权限与目录配置用户的信息保存在/etc/passwd文件中用户的密码存放在/etc/shadow用户组的信息存放在/etc/grouplinux中系统是根据 uid来识别用户的，每一个用户对应一个uid 环境变量 ls -l 以长模式的形式查看目录下的文件。 第一列为权限第二列为文件的硬链接数第三列 为文件的所有者第四列 为文件的所属组文件以：- 普通文件 d: 目录 b：设备文件（块设备：可">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/21/linux基础/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/16/linux的文件权限与目录配置/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>linux学习 | 爱自由</title>
+  <title>文件权限与目录配置 | 爱自由</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/linux基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/linux的文件权限与目录配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="The Answer">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">linux学习
+          <h1 class="post-title" itemprop="name headline">文件权限与目录配置
               
             
           </h1>
@@ -356,24 +356,12 @@
                 
               
 
-              <time title="创建时间：2018-09-21 23:34:29" itemprop="dateCreated datePublished" datetime="2018-09-21T23:34:29+08:00">2018-09-21</time>
+              <time title="创建时间：2019-02-16 23:34:29 / 修改时间：23:52:09" itemprop="dateCreated datePublished" datetime="2019-02-16T23:34:29+08:00">2019-02-16</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-02-16 23:10:40" itemprop="dateModified" datetime="2019-02-16T23:10:40+08:00">2019-02-16</time>
               
             
           </span>
@@ -424,23 +412,19 @@
       
 
       
-        <p>#基础部分<br><strong>分区</strong><br>hd 硬盘  hda hdb hdc 表示abc 三个硬盘<br>sata 硬盘  sd  sda sdb sdc 表示abc 三个硬盘<br>hda1 hda2 hda3 表示第一个硬盘的1、2、3分区<br>sda1 sda2 sda3 表示第一个硬盘的1、2、3分区</p>
-<p>挂载点：<br>windows 分区，必须给每一个分区分配一个盘符；才能够看到及使用该分区。</p>
-<p>在linux下自由/可以当盘符，所以其他的分区，都得在/下创建文件。挂载点就是/下面创建的路径。</p>
-<p>linux网卡，使用eth来表示，windows下使用本地连接来表示。</p>
-<p>一台电脑装多个操作系统的话，系统不能安装到同一个分区下。window系统只能装在主分区里面。</p>
-<p>在linux里面以点号开头的，都是隐藏文件。</p>
-<p>图形化界面同命令行的切换，linux一般有七个控制台，1到6个都是字符界面，第7个是图形化界面。ctl + alt + f1~f6，切换控制台。 ctl +  alt + f7 ，图形化界面。  控制台又称之为入口，通过这七个控制台都可以登入到系统。  使用命令tty 可以查看当前所在第几个控制台。</p>
-<p>linux中命令的格式。 命令 -选项… 参数  （选项表示如何执行该命令）（-后面跟的是选项）  ls -h  (-h 选项以能看懂的方式显示大小)（当选项是一个单词整体的时候，前面需要两条 杠 –）<br>在命令行执行命令时候的声音执行命令  modprobe -r pcspkr，root用户下。</p>
-<p>快捷键：ctl +a 光标跳到本行的开头。 ctl +e 光标跳到本行末尾。再按住左右建，一个单词一个单词的跳 ctl +u 光标位置删除到本行的开头  ctl +k 当前光标一直删除到本行的结尾。<br>执行命令：touch xx 后再执行命令 ^xx ^yy，表示重新执行前一个命令，并将xx替换成yy执行一遍  相当于执行了一遍：touch yy。<br>ctl +shift +t 打开新的终端，ctl +shift +pageup或者+pagedown切换终端。</p>
-<p>命令<strong>whatis +命令</strong>  该命令用来解释该命令有什么作用，显示不同的章节<br>–help  告诉具体的用法。若选项或文件用[]括起来的话，表示该选项或者文件可以省略。  …表示可以有多个选项或者文件</p>
-<p><strong>小写的n</strong>从上往下查找，<strong>大写的N</strong>表示从下往上查找。 <strong>/^des</strong>该命令表示查找开头为des的单词，尖括号表示开头。</p>
-<p>若某个命令只能记住一部分，可以使用 命令：<strong>man -k</strong>能记住的部分，此后将会显示全部包含该部分的命令。<br>man 还可以查询配置文件的使用方法。帮助文档存放在/usr/shoare/doc里面。</p>
-<p>man +命令  查看命令使用方法，默认的是显示第一章。。若要查询别的章节使用：man 章节 +命令</p>
-<p>文本编辑：gedit 图形化编辑。</p>
-<p><strong>运行级别</strong>    不同的运行级别里面，运行的服务不一样。<br>linux中 /etc/init.d 或者 rc.d/inid.d   然后运行的级别就是在rc.d里面的7个不同的级别。不同的级别就运行对应的rc5.d,里面的服务，，服务以K开头的表示该服务停止运行。  查看运行级别的命令：<strong>runlevel</strong><br>图形化界面在级别5.<br>级别1单用户模式。<br>级别3 存文本模式，在存文本级别下可以手动打开图形界面，执行命令：startx，虽然启动了图形化界面，但是运行级别未改变。<br>级别6 重启</p>
-<p>每个级别进入系统都有7个控制台。</p>
-<p><strong>忘记root密码</strong></p>
+        <h2 id="文件权限与目录配置"><a href="#文件权限与目录配置" class="headerlink" title="文件权限与目录配置"></a><strong>文件权限与目录配置</strong></h2><p><strong>用户的信息保存在/etc/passwd文件中</strong><br><strong>用户的密码存放在/etc/shadow</strong><br><strong>用户组的信息存放在/etc/group</strong><br>linux中系统是根据 <strong>uid</strong>来识别用户的，每一个用户对应一个uid <strong>环境变量</strong></p>
+<p>ls -l 以长模式的形式查看目录下的文件。 第一列为权限<br>第二列为文件的硬链接数<br>第三列 为文件的所有者<br>第四列 为文件的所属组<br>文件以：- 普通文件 d: 目录 b：设备文件（块设备：可以用来存储东西的文件，U盘，硬盘，光驱） c： 设备文件（字符型文件，鼠标、键盘、等硬件）<br>l: 指快捷方式（软连接） </p>
+<p>使用chmod  改权限  chmod u+x,g+w,o+r 文件名<br>chmod u=rw 文件名  前置将user的权限改为rw</p>
+<p>文件夹必须要有 <strong>X</strong> 权限才能cd 进去<br>查看文件属性使用命令 <strong>file</strong> + 文件名</p>
+<p>##</p>
+<p><strong>切换目录</strong>      cd - 切换到上一次的目录<br>linux中拷贝快捷方式，是直接拷贝源文件为目的文件 若只拷贝快捷方式则需要加上 -d<br>linux中拷贝文件:若要拷贝文件的属性，这需要在命令后面加上 选项 -p</p>
+<p>##文件查看<br>cat -n 文件名，，查看文件时第一列显示 行数<br><strong>more</strong> 从上往下显示，按回车一行一行的往下显示，按空格一屏幕的往下，，more 分屏显示<br><strong>less</strong> less支持往前和往后看。按pageup和pagedown，其他的和more相同，在less里面支持查找，按命令/，按n从上往下依次查找，N从下往上查找。<br><strong>head</strong> 查看文件的头几行，默认前10行，若其他的行，这使用命令head -5 文件，查看文件的前5行<br><strong>tail</strong> 查看文件的尾5行，  若查看其他行，则使用命令 tail -6 文件，查看文件尾5行。      tail -f 文件名  实时查看文件写入情况<br><strong>以上命令只能查看文本文件</strong><br><strong>若要查看二进制文件，则使用命令：od -t c 文件名</strong><br><strong>查看非纯文本文件使用命令：strings 文件名</strong></p>
+<p><strong>创建一个文件</strong>：touch 文件名 如果某个文件已经存在的情况下，就是将已经存在的文件的时间改为创建的当前时间</p>
+<p><strong>umask</strong> 权限过滤符，值代表被过滤的权限。文件默认的权限为666 文件夹默认的权限为 777 。 然后过滤掉umask值存在的权限</p>
+<p><strong>chattr</strong>  lsattr查看隐藏权限  chattr +a 文件夹  表示该文件夹下面只能添加文件不能删除          chattr +i  文件夹 表示该文件夹下面文件不能添加也不能删除</p>
+<p><strong>特殊权限</strong>：SUID ，若一个<strong>命令</strong>的所有者权限时候有S的时候，其他用户自行该命令时，也具有所有者的权限。<br>SGID：</p>
+<p>#命令与文件的查询<br><strong>查看命令在哪个路径</strong>：<br>which +命令  或者 where is + 命令<br>locate +文件名 根据/var/lib/mlocate/mlocate.db数据库里面的内容进行查找，每一天更新一次，若要手动更新的换，执行命令 updatedb，<br>locate +i +文件名  不区分大小写</p>
+<p><strong>find</strong> 目录 -属性 值 （未指定目录的话，就在当前路径下查找）属性name size perm（权限）等属性</p>
 
       
     </div>
@@ -461,7 +445,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/初学者/" rel="tag"># 初学者</a>
+            <a href="/tags/权限与目录/" rel="tag"># 权限与目录</a>
           
         </div>
       
@@ -474,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/16/测试/" rel="next" title="测试">
-                <i class="fa fa-chevron-left"></i> 测试
+              <a href="/2019/02/16/linux基础/" rel="next" title="linux学习">
+                <i class="fa fa-chevron-left"></i> linux学习
               </a>
             
           </div>
@@ -483,10 +467,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/21/MySql/" rel="prev" title="MySql基础">
-                MySql基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -531,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -547,7 +536,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -583,7 +572,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -609,6 +604,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件权限与目录配置"><span class="nav-number">1.</span> <span class="nav-text">文件权限与目录配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

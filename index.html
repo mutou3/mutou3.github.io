@@ -310,6 +310,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/linux的文件权限与目录配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/16/linux的文件权限与目录配置/" itemprop="url">
+                  文件权限与目录配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-16 23:34:29 / 修改时间：23:52:09" itemprop="dateCreated datePublished" datetime="2019-02-16T23:34:29+08:00">2019-02-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="文件权限与目录配置"><a href="#文件权限与目录配置" class="headerlink" title="文件权限与目录配置"></a><strong>文件权限与目录配置</strong></h2><p><strong>用户的信息保存在/etc/passwd文件中</strong><br><strong>用户的密码存放在/etc/shadow</strong><br><strong>用户组的信息存放在/etc/group</strong><br>linux中系统是根据 <strong>uid</strong>来识别用户的，每一个用户对应一个uid <strong>环境变量</strong></p>
+<p>ls -l 以长模式的形式查看目录下的文件。 第一列为权限<br>第二列为文件的硬链接数<br>第三列 为文件的所有者<br>第四列 为文件的所属组<br>文件以：- 普通文件 d: 目录 b：设备文件（块设备：可以用来存储东西的文件，U盘，硬盘，光驱） c： 设备文件（字符型文件，鼠标、键盘、等硬件）<br>l: 指快捷方式（软连接） </p>
+<p>使用chmod  改权限  chmod u+x,g+w,o+r 文件名<br>chmod u=rw 文件名  前置将user的权限改为rw</p>
+<p>文件夹必须要有 <strong>X</strong> 权限才能cd 进去<br>查看文件属性使用命令 <strong>file</strong> + 文件名</p>
+<p>##</p>
+<p><strong>切换目录</strong>      cd - 切换到上一次的目录<br>linux中拷贝快捷方式，是直接拷贝源文件为目的文件 若只拷贝快捷方式则需要加上 -d<br>linux中拷贝文件:若要拷贝文件的属性，这需要在命令后面加上 选项 -p</p>
+<p>##文件查看<br>cat -n 文件名，，查看文件时第一列显示 行数<br><strong>more</strong> 从上往下显示，按回车一行一行的往下显示，按空格一屏幕的往下，，more 分屏显示<br><strong>less</strong> less支持往前和往后看。按pageup和pagedown，其他的和more相同，在less里面支持查找，按命令/，按n从上往下依次查找，N从下往上查找。<br><strong>head</strong> 查看文件的头几行，默认前10行，若其他的行，这使用命令head -5 文件，查看文件的前5行<br><strong>tail</strong> 查看文件的尾5行，  若查看其他行，则使用命令 tail -6 文件，查看文件尾5行。      tail -f 文件名  实时查看文件写入情况<br><strong>以上命令只能查看文本文件</strong><br><strong>若要查看二进制文件，则使用命令：od -t c 文件名</strong><br><strong>查看非纯文本文件使用命令：strings 文件名</strong></p>
+<p><strong>创建一个文件</strong>：touch 文件名 如果某个文件已经存在的情况下，就是将已经存在的文件的时间改为创建的当前时间</p>
+<p><strong>umask</strong> 权限过滤符，值代表被过滤的权限。文件默认的权限为666 文件夹默认的权限为 777 。 然后过滤掉umask值存在的权限</p>
+<p><strong>chattr</strong>  lsattr查看隐藏权限  chattr +a 文件夹  表示该文件夹下面只能添加文件不能删除          chattr +i  文件夹 表示该文件夹下面文件不能添加也不能删除</p>
+<p><strong>特殊权限</strong>：SUID ，若一个<strong>命令</strong>的所有者权限时候有S的时候，其他用户自行该命令时，也具有所有者的权限。<br>SGID：</p>
+<p>#命令与文件的查询<br><strong>查看命令在哪个路径</strong>：<br>which +命令  或者 where is + 命令<br>locate +文件名 根据/var/lib/mlocate/mlocate.db数据库里面的内容进行查找，每一天更新一次，若要手动更新的换，执行命令 updatedb，<br>locate +i +文件名  不区分大小写</p>
+<p><strong>find</strong> 目录 -属性 值 （未指定目录的话，就在当前路径下查找）属性name size perm（权限）等属性</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/linux基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -431,6 +601,332 @@
 <h3 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a><strong>运行级别</strong></h3><p><strong>运行级别</strong>    不同的运行级别里面，运行的服务不一样。<br>linux中 /etc/init.d 或者 rc.d/inid.d   然后运行的级别就是在rc.d里面的7个不同的级别。不同的级别就运行对应的rc5.d,里面的服务，，服务以K开头的表示该服务停止运行。  查看运行级别的命令：<strong>runlevel</strong><br>图形化界面在级别5.<br>级别1单用户模式。<br>级别3 存文本模式，在存文本级别下可以手动打开图形界面，执行命令：startx，虽然启动了图形化界面，但是运行级别未改变。<br>级别6 重启</p>
 <p>每个级别进入系统都有7个控制台。</p>
 <p><strong>忘记root密码</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/vim编辑器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/16/vim编辑器/" itemprop="url">
+                  vim编辑器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-16 23:34:29 / 修改时间：23:56:51" itemprop="dateCreated datePublished" datetime="2019-02-16T23:34:29+08:00">2019-02-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>vim</strong> +文件名  直接打开文件，进入到命令模式<br>（老段视频第10章）</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/磁盘和文件系统的管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/16/磁盘和文件系统的管理/" itemprop="url">
+                  磁盘和文件系统
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-16 23:34:29 / 修改时间：23:55:26" itemprop="dateCreated datePublished" datetime="2019-02-16T23:34:29+08:00">2019-02-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="linux支持文件系统"><a href="#linux支持文件系统" class="headerlink" title="linux支持文件系统"></a><strong>linux支持文件系统</strong></h3><p><strong>查看磁盘大小</strong>：<br><strong>df -h</strong> 以易读的方式显示磁盘使用情况<br><strong>du -sh</strong> -s选项表示只单独查看该文件的大小，若不跟选项-s会把文件夹下的所有的文件大小都显示出来。</p>
+<p><strong>连接文件</strong><br><strong>软连接</strong>相当于window中的快捷方式；创建软连接的方式命令：ln -s 文件名 软链接文件名 表示创建了aal为aa的软连接（快捷方式）<br><strong>硬链接</strong>：同一个文件有几个名字，创建硬链接的命令为：<br>ln 文件名 硬链接文件名<br><strong>对磁盘分区</strong>：命令fdisk,命令：fdisk -l 直接显示所有的硬盘和分区<br><strong>创建分区</strong>：fdisk /dev/sda        对硬盘进行分区。所以后面跟硬盘名<br>主分区最多只有4个，<br>重新创建分区标后，需要更新分区表命令：partprobe<br>划好分区后，分区不能直接使用，需要格式化新建的分区，命令：mkfs -t ext3 /dev/sda5 或者 mkfs.ext3 /dev/sda5…若要指定block size的大小，需要指定  mkfs.ext3 -b 4096 /dev/sda5.。。默认的block size为1024k<br>格式化好后若要使用还必须要挂载：mount  /<br><strong>磁盘检验</strong> fsck 对整个分区进行检查  fsck /dev/sda5<br>检测系统坏道：badblocks /dev/sda5<br><strong>挂载分区</strong>：必须要把分区挂载到某个目录下命令：mount 外部设备 目录<br>mount /dev/sda5 /mnt<br>umount 外部设备 或者  umount 挂载点<br>mount -o remount,ro /mnt 以只读的形式重新挂载/mnt<br>mount -o remount,rw /mnt 以只读和写的形式重新挂载/mnt<br>mount -o remount,noexcu /mnt 以没有可以执行权限重新挂载/mnt<br>若卸载的是后提示，设备正在使用，可以使用命令fuser -mv /mnt查看到底是那个进程正在使用该设备<br>以上使用mount挂载的是临时挂载，关机后就没在挂载了<br>挂载镜像 mount -o loop XX.iso /mnt 挂载镜像使用参数loop<br><strong>设置开机挂载</strong>配置文件为：/etc/fstab   文件最左边为设备名  中间为挂载点  然后为文件系统  默认权限  第一个数字（是否做备份） 第二个数字（开机时是否进行fsck进行检查）<br><strong>查看磁盘参数</strong>  tune2fs -l /dev/sda5</p>
+<p><strong>创建交换分区</strong>  查看交换分区 cat /proc/swaps</p>
+<p>diff +文件 +文件  对比两个文件的区别    </p>
+<h4 id="文件与文件系统的压缩与打包"><a href="#文件与文件系统的压缩与打包" class="headerlink" title="文件与文件系统的压缩与打包"></a><strong>文件与文件系统的压缩与打包</strong></h4><p>压缩命令：<strong>gzip</strong> + 文件名  （源文件也不存在了） zcat + 压缩文件的名字  （不解压的情况下，也可以查看压缩文件的内容）<br>gzip -c hosts &gt; hosts.gz  保留源文件<br><strong>bzip2</strong> hosts 源文件也不存在了   bzip2 -c &gt; hosts.bz2  保留源文件   bzcat + 压缩文件名 也可以查看内容<br><strong>zip</strong> hosts.zip hosts    解压直接运行：unzip hosts.zip</p>
+<p>打包：<strong>tar</strong>   tar -tvf  +打包文件名   （不解压的时，查看打包文件的内容）<br>指定解压的路径：tar -xvf  hosts.tar -C aa/   指定解压到aa目录下<br>指定解压的某个文件： tar -xvf xx.tar 文件名   （指定解压这一个文件名出来）<br>tar -czvf  xxx.tar.gz xxx  –remove-files  (移除源文件进行打包压缩)   gz后缀压缩<br>tar -jcvf  xxx.tar.bz2 xxx  –remove-files （移除源文件进行打包压缩） bz2后缀压缩<br>tar -jxvf  xxx.tar.bz2  解压后缀为bz2的压缩文件<br>tar -jxvf  xxx.tar.gz2 -C aa/  （指定解压文件到哪个目录下）</p>
+<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a><strong>备份</strong></h3><p>备份分为3种，全备份，增量备份，差异备份<br>dump -数字<br>（数字代表备份级别，只会从上次备份级别比他小的备份开始备份）<br>增量备份，级别是依次增大，差异备份，级别依次减小</p>
+<p>dump -0u -f rhce/1.dump /dev/sda3  （该命令表示对分区sda3进行全备份，并将备份文件存储在当前路径的rhce/下面，u表示将备份的日志写到/etc/dumpdatas下）</p>
+<h3 id="恢复备份"><a href="#恢复备份" class="headerlink" title="恢复备份"></a><strong>恢复备份</strong></h3><p><strong>restore</strong> -t -f 备份.dump 文件  （-t表示不恢复的时候查看备份文件的内容）<br>restore -r -f /root/rhce/1.dump (-f指定恢复的文件)（-r 把所有的备份文件全部恢复出来）<br><strong>restore</strong> -i -f /root/rhce/1.dump (该命令会有一个交互，可以选定具体恢复哪些文件)</p>
+<p>新建镜像：mkisofs -o xx.iso 文件名 文件名 （创建镜像）<br>挂载镜像：mount -o loop xx.iso /mnt (挂载镜像)<br>cp /dev/cdrom/ xxx.iso  (直接把光盘拷贝为镜像)  （然后挂载就可以使用）<br><strong>dd</strong> if=/dev/zero of=file4 bs=1M count=1<br><strong>dd</strong> if=/dev/sda of=/dev/sdb<br>dd if=/dev/sda3 of=test (把sda3的数据全部整合到test里面)<br>dd if=test of=/dev/sda3  (把test的数据恢复到sda3中去)<br>dd if=/dev/sda1 of=/dev/sda2   (把sda1的数据拷贝到sda2分区里面去)</p>
+<p><strong>find -name ‘file*’ |cpio -o &gt; xx.cpio</strong><br>（把文件名包含有file的文件打包到 xx.cpio）<br><strong>cpio -iu &lt;xx.cpio</strong> (把xx.cpio解包)</p>
 
           
         
@@ -1144,7 +1640,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1180,7 +1676,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
