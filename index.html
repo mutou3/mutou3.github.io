@@ -830,7 +830,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/linux基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/使用存储过程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="The Answer">
@@ -849,8 +849,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/16/linux基础/" itemprop="url">
-                  linux学习
+                <a class="post-title-link" href="/2019/02/17/使用存储过程/" itemprop="url">
+                  使用存储过程
                 </a>
               
             
@@ -876,24 +876,12 @@
                 
               
 
-              <time title="创建时间：2019-02-16 23:34:29" itemprop="dateCreated datePublished" datetime="2019-02-16T23:34:29+08:00">2019-02-16</time>
+              <time title="创建时间：2019-02-17 17:52:56 / 修改时间：17:53:57" itemprop="dateCreated datePublished" datetime="2019-02-17T17:52:56+08:00">2019-02-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-02-17 00:02:39" itemprop="dateModified" datetime="2019-02-17T00:02:39+08:00">2019-02-17</time>
               
             
           </span>
@@ -910,7 +898,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
 
                 
                 
@@ -946,23 +934,17 @@
       
         
           
-            <h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><h3 id="分区"><a href="#分区" class="headerlink" title="分区"></a><strong>分区</strong></h3><p>hd 硬盘  hda hdb hdc 表示abc 三个硬盘<br>sata 硬盘  sd  sda sdb sdc 表示abc 三个硬盘<br>hda1 hda2 hda3 表示第一个硬盘的1、2、3分区<br>sda1 sda2 sda3 表示第一个硬盘的1、2、3分区</p>
-<h3 id="挂载点："><a href="#挂载点：" class="headerlink" title="挂载点："></a><strong>挂载点：</strong></h3><p>windows 分区，必须给每一个分区分配一个盘符；才能够看到及使用该分区。</p>
-<p>在linux下自由/可以当盘符，所以其他的分区，都得在/下创建文件。挂载点就是/下面创建的路径。</p>
-<h3 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a><strong>网卡</strong></h3><p>linux网卡，使用eth来表示，windows下使用本地连接来表示。</p>
-<p>一台电脑装多个操作系统的话，系统不能安装到同一个分区下。window系统只能装在主分区里面。</p>
-<p>在linux里面以点号开头的，都是隐藏文件。</p>
-<h3 id="图形化界面与命令行切换"><a href="#图形化界面与命令行切换" class="headerlink" title="图形化界面与命令行切换"></a><strong>图形化界面与命令行切换</strong></h3><p>图形化界面同命令行的切换，linux一般有七个控制台，1到6个都是字符界面，第7个是图形化界面。ctl + alt + f1~f6，切换控制台。 ctl +  alt + f7 ，图形化界面。  控制台又称之为入口，通过这七个控制台都可以登入到系统。  使用命令tty 可以查看当前所在第几个控制台。</p>
-<h3 id="命令的执行"><a href="#命令的执行" class="headerlink" title="命令的执行"></a><strong>命令的执行</strong></h3><p>linux中命令的格式。 命令 -选项… 参数  （选项表示如何执行该命令）（-后面跟的是选项）  ls -h  (-h 选项以能看懂的方式显示大小)（当选项是一个单词整体的时候，前面需要两条 杠 –）<br>在命令行执行命令时候的声音执行命令  modprobe -r pcspkr，root用户下。</p>
-<p>快捷键：ctl +a 光标跳到本行的开头。 ctl +e 光标跳到本行末尾。再按住左右建，一个单词一个单词的跳 ctl +u 光标位置删除到本行的开头  ctl +k 当前光标一直删除到本行的结尾。<br>执行命令：touch xx 后再执行命令 ^xx ^yy，表示重新执行前一个命令，并将xx替换成yy执行一遍  相当于执行了一遍：touch yy。<br>ctl +shift +t 打开新的终端，ctl +shift +pageup或者+pagedown切换终端。</p>
-<p>命令<strong>whatis +命令</strong>  该命令用来解释该命令有什么作用，显示不同的章节<br>–help  告诉具体的用法。若选项或文件用[]括起来的话，表示该选项或者文件可以省略。  …表示可以有多个选项或者文件</p>
-<p><strong>小写的n</strong>从上往下查找，<strong>大写的N</strong>表示从下往上查找。 <strong>/^des</strong>该命令表示查找开头为des的单词，尖括号表示开头。</p>
-<p>若某个命令只能记住一部分，可以使用 命令：<strong>man -k</strong>能记住的部分，此后将会显示全部包含该部分的命令。<br>man 还可以查询配置文件的使用方法。帮助文档存放在/usr/shoare/doc里面。</p>
-<p>man +命令  查看命令使用方法，默认的是显示第一章。。若要查询别的章节使用：man 章节 +命令</p>
-<p><strong>文本编辑：gedit 图形化编辑。</strong></p>
-<h3 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a><strong>运行级别</strong></h3><p><strong>运行级别</strong>    不同的运行级别里面，运行的服务不一样。<br>linux中 /etc/init.d 或者 rc.d/inid.d   然后运行的级别就是在rc.d里面的7个不同的级别。不同的级别就运行对应的rc5.d,里面的服务，，服务以K开头的表示该服务停止运行。  查看运行级别的命令：<strong>runlevel</strong><br>图形化界面在级别5.<br>级别1单用户模式。<br>级别3 存文本模式，在存文本级别下可以手动打开图形界面，执行命令：startx，虽然启动了图形化界面，但是运行级别未改变。<br>级别6 重启</p>
-<p>每个级别进入系统都有7个控制台。</p>
-<p><strong>忘记root密码</strong></p>
+            <h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程简单来说，就是为以后的使用而保存的一条或多条Mysql语句的集合，可将其视为批文件，虽然他们的作用不仅限于批处理。</p>
+<h2 id="执行存储过程"><a href="#执行存储过程" class="headerlink" title="执行存储过程"></a>执行存储过程</h2><ol>
+<li>mysql称存储过程为调用，因此mysql执行存储过程的语句为CALL。CALL接收存储过程的名字以及需要传递给它的任意参数。</li>
+<li>创建存储过程<br>存储过程其实就是定义的函数，直接调用即可。<br>一般，存储过程并不显示结果，而是把结果返回给你指定的变量。<br><strong>变量</strong>：内存中一个特定的位置，用来临时存储数据。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">CREATE PROCEDURE productpricing(</span><br><span class="line">	OUT pl DECIMAL(8,2),</span><br><span class="line">	OUT ph DECIMAL(8,2),</span><br><span class="line">	OUT pa DECIMAL(8,2)</span><br><span class="line">)</span><br><span class="line">BEGIN</span><br><span class="line">	SELECT MIN(prod_price)</span><br><span class="line">	INTO pl</span><br><span class="line">	FROM products;</span><br><span class="line">	SELECT MAX(prod_price)</span><br><span class="line">	INTO ph</span><br><span class="line">	FROM products;</span><br><span class="line">	SELECT AVG(prod_price)</span><br><span class="line">	INTO pa </span><br><span class="line">	FROM products;</span><br><span class="line">END;</span><br><span class="line">#此存储过程接收3个参数：pl存储产品的最低价格，ph存储产品最高价格，pa存储产品的平均价格。每个参数必须具有指定的类型。</span><br><span class="line">关键字out指出相应的参数用来从存储过程传出一个值（返回给调用者），mysql支持IN（传递给存储过程）、OUT（从存储过程传出）和</span><br><span class="line">INTO（对存储过程传入和传出）类型的参数。存储过程的代码位于BEGIN和END语句内。此处为select语句用来检索数据，然后保存到相应的</span><br><span class="line">变量（通过指定INTO关键字）。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CALL productpricing(@pricelow,@pricehigh,@priceaverage);</span><br><span class="line">#调用该存储过程mysql所有的变量都必须以@开始。在调用时这条语句并不显示任何结果，结果都已经存储在变量中</span><br><span class="line"></span><br><span class="line">SELECT @pricelow AS gg,@pricehigh,@priceaverage;</span><br><span class="line">#为了显示值，必须用以上语句，重新检索出变量中的值。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">CREATE PROCEDURE ordertotal(</span><br><span class="line">	IN onumber INT,</span><br><span class="line">	OUT ototal DECIMAL(8,2)</span><br><span class="line">)</span><br><span class="line">BEGIN</span><br><span class="line">	SELECT SUM(item_price*quantity)</span><br><span class="line">	FROM orderitems </span><br><span class="line">	WHERE order_num = onumber</span><br><span class="line">	INTO ototal;</span><br><span class="line">END;</span><br><span class="line">onumber定义为IN，因为订单号被传入存储过程。ototal定义为out，因为要从存储过程返回合计。INTO使用ototal存储计算出来合计。</span><br><span class="line">CALL ordertotal(20005,@tatal);</span><br><span class="line">SELECT @tatal;</span><br><span class="line">#调用该函数必须传递两个参数，第一个参数为订单号，第二个为变量名。</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>迄今为止，使用的所有存储过程基本上都是封装mysql简单的select语句。</li>
+</ol>
 
           
         
@@ -1016,7 +998,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/MySql/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/视图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="The Answer">
@@ -1035,8 +1017,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/21/MySql/" itemprop="url">
-                  MySql基础
+                <a class="post-title-link" href="/2019/02/17/视图/" itemprop="url">
+                  视图
                 </a>
               
             
@@ -1062,24 +1044,12 @@
                 
               
 
-              <time title="创建时间：2018-09-21 23:34:29" itemprop="dateCreated datePublished" datetime="2018-09-21T23:34:29+08:00">2018-09-21</time>
+              <time title="创建时间：2019-02-17 17:50:55 / 修改时间：17:52:31" itemprop="dateCreated datePublished" datetime="2019-02-17T17:50:55+08:00">2019-02-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-22 00:35:06" itemprop="dateModified" datetime="2018-09-22T00:35:06+08:00">2018-09-22</time>
               
             
           </span>
@@ -1096,7 +1066,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MySql/" itemprop="url" rel="index"><span itemprop="name">MySql</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
 
                 
                 
@@ -1132,13 +1102,59 @@
       
         
           
-            <h2 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h2><p>数据库是：一个以某种有组织的方式存储的数据集合。<br>数据库（database）保存有组织的数据容器（通常是一个文件或是一组文件）。<br>数据库软件应称为DBMS（数据库管理系统）。<br>数据库是通过DBMS创建和操作的容器。（用户并不直接访问数据库，而是通过DBMS，他替你访问数据库）</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><h4 id="1-表（table）"><a href="#1-表（table）" class="headerlink" title="1. 表（table）"></a>1. <strong>表（table）</strong></h4><p>表是一种结构化的文件，可以用来存储某种特定类型的数据，某种特定类型数据的结构化清单。表名的唯一性取决于多个因素，如数据库名和表名等的结合。相同的数据库中不能两次使用相同的表名，但是在不同的数据库中却可以使用相同的表名。</p>
-<h4 id="2-模式（schema）"><a href="#2-模式（schema）" class="headerlink" title="2. 模式（schema）"></a>2. <strong>模式（schema）</strong></h4><p>描述表的这组信息就是所谓的模式,模式可以用来描述数据库中的特定的表以及整个数据库。关于数据库和表的布局及特性的信息。</p>
-<h4 id="3-列（column）和数据类型"><a href="#3-列（column）和数据类型" class="headerlink" title="3. 列（column）和数据类型"></a>3. <strong>列（column）和数据类型</strong></h4><p>列： 表中的一个字段。所有的表都是由一个或者多个列组成的。<br>数据类型： 说容许的数据类型。每个表都有相应的数据类型，它限制（或容许）该列中存储的数据。<br>数据类型限制可存储在列中的数据类型。在创建表时必须对数据类型给予特别的关注。</p>
-<h4 id="4-行（row）"><a href="#4-行（row）" class="headerlink" title="4. 行（row）"></a>4. <strong>行（row）</strong></h4><p>表中的数据是按照行储存的，所保存的每个记录存储在自己的行内。 表中的行数为记录的总数。你可能在听到用户在提到行（row）时称其为数据库的记录（record）。</p>
-<h4 id="5-主键（primary-key）"><a href="#5-主键（primary-key）" class="headerlink" title="5. 主键（primary key）"></a>5. <strong>主键（primary key）</strong></h4><p>表中的每一行都应该有可以唯一标识自己的一列（或一组）。其值能够唯一区分表中每个行。唯一标识表中每行的这个列（或这组列）称为主键。<br><code>表中的任何列都可以作为主键，他只要满足一下条件</code><br>        (1.)任意两行都不具有相同的主键值  (2.)每个行都必须具有一个主键值（主键列不允许NULL值）。 </p>
-<h3 id="什么是SQL"><a href="#什么是SQL" class="headerlink" title="什么是SQL"></a>什么是SQL</h3><p>1.<strong>sql</strong><br>sql是一种专门用来与数据库通信的语言</p>
+            <h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><h2 id="视图的定义"><a href="#视图的定义" class="headerlink" title="视图的定义"></a>视图的定义</h2><ol>
+<li>视图是虚拟的表。与包含数据的表不一样，视图只包含使用时动态检索数据的查询。</li>
+<li>为什么使用视图</li>
+</ol>
+<ul>
+<li>重用视图</li>
+<li>简化复杂的SQL操作，在编写查询后，可以方便地重用它而不必要知道它的细节</li>
+<li>使用表的组成部分而不是整个表</li>
+<li>保护数据。可以授予部分权限</li>
+<li>更改数据格式和表示。视图可以返回与底层表的表示和格式不同的数据<br><strong>在视图创建之后，可以用与表基本相同的方式利用他们。可以将视图执行select操作，过滤和排序数据，将试图联结到其他视图或表。重要的是知道视图仅仅用来查看存储在别处的数据的一种设施。试图本身不包含数据，因此他们返回的数据是从其他表中检索出来的</strong></li>
+</ul>
+<ol start="3">
+<li>使用视图。</li>
+</ol>
+<ul>
+<li>视图用creat view 语句来创建。</li>
+<li>使用show creat view viewname，来查看创建视图的语句。</li>
+<li>用drop删除视图，其语法为drop view viewname；</li>
+<li>更新视图时，可以先用drop在用creat，也可以直接用creat orreplace view。</li>
+</ul>
+<ol start="4">
+<li>利用视图简化复杂的联结。</li>
+</ol>
+<ul>
+<li>视图的最常见的应用之一就是隐藏复杂的SQL，这通常都会涉及联结。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW productcustomers AS SELECT cust_name,cust_contact,prod_id FROM customers,orders,orderitems </span><br><span class="line">WHERE customers.cust_id=orders.cust_id AND orderitems.order_num = orders.order_num;</span><br><span class="line">#创建一个名为productcustomers的视图。它联结三个表，如果执行select * from productcustomers，将列出订购了任意产品的顾客。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FroM productcustomers WHERE prod_id LIKE &apos;TNT%&apos;;</span><br><span class="line">#使用视图查询购买了产品TNT2的客户；</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>用视图重新格式化检索出的数据<br>视图的另外一种用途就是重新格式化检索出的数据。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT CONCAT(Rtrim(vend_name),&apos;(&apos;,Rtrim(vend_country),&apos;)&apos;) AS  vend_title FROM vendors order by vend_name;</span><br><span class="line">#合并一列检索出的数据，可以添加视图重用</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW vendorlocations AS SELECT CONCAT(Rtrim(vend_name),&apos;(&apos;,Rtrim(vend_country),&apos;)&apos;) </span><br><span class="line">AS  vend_title FROM vendors order by vend_name;</span><br><span class="line">#创建格式化检索的数据的视图。</span><br><span class="line">SELECT * FROM vendorlocations;</span><br><span class="line">#直接使用视图，查询而不用每一次都编写复杂的语句。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW customersemaillist AS SELECT cust_id,cust_name,cust_email FROM customers </span><br><span class="line">WHERE cust_email IS NOT NULL;</span><br><span class="line">#创建排除表中没有email的客户的视图</span><br><span class="line">select * from customeremaillist;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li><p>使用视图计算字段<br><strong>视图对于简化字段的使用特别有用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW orderitemsexpanded AS SELECT prod_id,quantity,item_price,quantity*item_price </span><br><span class="line">AS expanded_price FROM orderitems;</span><br><span class="line">#创建视图</span><br><span class="line">select * from orderitemsexpanded where orer_num = 20005;</span><br><span class="line">#使用视图检索订单为20005的数据。从而是sql语句简单化。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新视图<br>通常视图是可以更新的（即可以使用insert，update和delete）。更新一个视图将更新其基表。如果你对视图增加或是删除行，实际上是对其基表增加或删除行。</p>
+</li>
+</ol>
+<p><strong>总结视图就是使用虚拟的表，以替代复杂的sql语句，该虚拟表，及为创建该视图时候的sql所检索出的数据，作为虚拟的表来使用。</strong></p>
+<h1 id="使用存储过程"><a href="#使用存储过程" class="headerlink" title="使用存储过程"></a>使用存储过程</h1><h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><ol>
+<li>存储过程<br>迄今为止，使用的大多数sql语句都是针对一个或多个表的单条语句，并非所有操作都有这么简单，经常会有一个完整的操作需要多条语句才能完成。</li>
+</ol>
+<p><strong>存储过程简单来说，就是为以后的使用而保存的一条或多条mysql语句的集合，可以将其视为批文件，虽然他们的作用不仅限于批处理</strong></p>
+<ol start="2">
+<li>使用存储过程的原因</li>
+</ol>
+<ul>
+<li>通过把处理封装在容易使用的单元中，简化复杂的操作。</li>
+<li>由于不要求反复建立一系列处理步骤，这保证了数据的完整性。 </li>
+</ul>
 
           
         
@@ -1192,7 +1208,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/16/测试/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/插入数据/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="The Answer">
@@ -1211,8 +1227,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/16/测试/" itemprop="url">
-                  测试
+                <a class="post-title-link" href="/2019/02/17/插入数据/" itemprop="url">
+                  插入数据
                 </a>
               
             
@@ -1238,28 +1254,34 @@
                 
               
 
-              <time title="创建时间：2018-09-16 22:51:56" itemprop="dateCreated datePublished" datetime="2018-09-16T22:51:56+08:00">2018-09-16</time>
+              <time title="创建时间：2019-02-17 17:49:27 / 修改时间：17:50:16" itemprop="dateCreated datePublished" datetime="2019-02-17T17:49:27+08:00">2019-02-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-17 00:05:57" itemprop="dateModified" datetime="2018-09-17T00:05:57+08:00">2018-09-17</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1289,14 +1311,28 @@
 
       
         
-          <p>你就可以看到你的博客了，今天学习了hexo+github搭建个人免费博客。刚开始是完全不知道怎么弄，就是这一点点的在网上查资料，然后慢慢摸索，直到现在大概用了6/7个小时左右几乎，就搭建好了自己的博客，基本的用法基本上已经能够使用呢，就是还有些细节问题还需要进一步的，学习。还需要进一步的完善改进自己的博客的样式，能让他达到完美的状态。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/16/测试/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="数据插入"><a href="#数据插入" class="headerlink" title="数据插入"></a>数据插入</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ol>
+<li><p>插入完整的行<br>把数据插入表中最简单的方法是使用基本的INSERT语法。它要求指定表名和被插入到新行中的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO customers</span><br><span class="line"> VALUES (NULL,</span><br><span class="line"> &apos;Pep E. LaPew&apos;,</span><br><span class="line"> &apos;100 Main Street&apos;,</span><br><span class="line"> &apos;Los Angeles&apos;,</span><br><span class="line"> &apos;CA&apos;,</span><br><span class="line"> &apos;90046&apos;,</span><br><span class="line"> &apos;USA&apos;,</span><br><span class="line"> NULL,</span><br><span class="line"> NULL);</span><br><span class="line"> #使用该语句插入时，要确保值与列对应，容易出错，风险较大，一般不使用。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> INSERT INTO customers(cust_name,</span><br><span class="line">cust_address,</span><br><span class="line">cust_city,</span><br><span class="line">cust_state,</span><br><span class="line">cust_zip,</span><br><span class="line">cust_country,</span><br><span class="line">cust_contact,</span><br><span class="line">cust_email)</span><br><span class="line">VALUES(&apos;Pep E. Lapew&apos;,</span><br><span class="line">&apos;100 Main Street&apos;,</span><br><span class="line">&apos;Los Angeles&apos;,</span><br><span class="line">&apos;CA&apos;,</span><br><span class="line">&apos;90046&apos;,</span><br><span class="line">&apos;USA&apos;,</span><br><span class="line">NULL,</span><br><span class="line">NULL);</span><br><span class="line">#该语句指定了表的列名，值的位置和列对应，不需要的列可以不体现出来，及忽略，顺序也可以随机，只要对应。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下条件</strong></p>
+<ul>
+<li>该列定义为允许NULL（无值或空值）</li>
+<li>在表定义中给出默认值。这表示如果不给出值，将使用默认值。</li>
+<li>如果对表中的不允许NULL值且没有默认值的列不给出值。</li>
+</ul>
+<ol start="2">
+<li>插入行的一部分</li>
+<li>插入多行</li>
+<li>插入某些查询的结果<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO customers(cust_id,cust_contact,cust_email,cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country) </span><br><span class="line">SELECT cust_id,cust_contact,cust_email,cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country FROM custnew;</span><br><span class="line">#select 中列出的每个列对应于customers表名后所跟的列表中的每个列。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>select语句可以包含where子句以过滤插入的数据。</strong></p>
+
+          
         
       
     </div>
@@ -1348,7 +1384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/16/my-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/全文本搜索/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="The Answer">
@@ -1367,8 +1403,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/16/my-first-blog/" itemprop="url">
-                  my-first_blog
+                <a class="post-title-link" href="/2019/02/17/全文本搜索/" itemprop="url">
+                  全文本搜索
                 </a>
               
             
@@ -1394,7 +1430,7 @@
                 
               
 
-              <time title="创建时间：2018-09-16 19:26:07 / 修改时间：19:33:13" itemprop="dateCreated datePublished" datetime="2018-09-16T19:26:07+08:00">2018-09-16</time>
+              <time title="创建时间：2019-02-17 17:48:14 / 修改时间：17:48:55" itemprop="dateCreated datePublished" datetime="2019-02-17T17:48:14+08:00">2019-02-17</time>
             
 
             
@@ -1404,6 +1440,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1433,14 +1487,21 @@
 
       
         
-          时间已经过去很多了，还有多少时间可以去浪费呢
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/16/my-first-blog/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="理解全文本搜索"><a href="#理解全文本搜索" class="headerlink" title="理解全文本搜索"></a>理解全文本搜索</h1><ol>
+<li>并非所有的引擎都支持全文本搜索。使用like可以找出包含特殊值或部分值的行（不管这些值位于行内的什么位置）使用全文本搜索时，mysql不需要分别查看每个行，不需要分别分析和处理每个词。mysql创建指定列中的一个索引，搜索可以针对这些词进行。（对索引指定的列进行搜索）。</li>
+<li>为了使用全文本搜索，必须索引被搜索的列，而且要随着数据的改变不断的重新索引。在索引之后，select可与match（）和against（）一起使用以实际执行搜索。</li>
+<li><p>一般在创建表时，启用全文本搜索。create table语句接收FULLTEXT子句，它给出被索引列的一个逗号分隔的列表。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE productsnotes </span><br><span class="line">(</span><br><span class="line">note_id	INT not NULL auto_increment,</span><br><span class="line">prod_id CHAR(10) NOT NULL,</span><br><span class="line">note_date datetime NOT NULL,</span><br><span class="line">note_text text NULL,</span><br><span class="line">PRIMARY KEY(note_id),</span><br><span class="line">FULLTEXT(note_text)</span><br><span class="line">)</span><br><span class="line">ENGINE=MyISAM;</span><br><span class="line">#创建productsnotes,FULLTEXT(note_text)的指示对它索引。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进行全文本搜索:在索引之后，使用两个函数Match（）和Against（）执行全文本搜索</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT note_text FROM productnotes WHERE MATCH(note_text) Against(&apos;rabbit&apos;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>此select语句检索单个列note_text。由于where子句，一个全文本搜索被执行。match（note_text）指示mysql针对指定的列进行搜索，against（’against’）指定词rabbit作为搜索文本。<br><strong>使用完整的match（）说明，传递给match（）的值必须与FULLTEXT（）定义中的相同。</strong></p>
+<p>全文本搜索的一个重要部分就是对结果排序，具有较高等级的行先返回.</p>
+
+          
         
       
     </div>
@@ -1492,7 +1553,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/联结表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="The Answer">
@@ -1511,8 +1572,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/15/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2019/02/17/联结表/" itemprop="url">
+                  联结表
                 </a>
               
             
@@ -1538,28 +1599,34 @@
                 
               
 
-              <time title="创建时间：2018-09-15 22:30:42" itemprop="dateCreated datePublished" datetime="2018-09-15T22:30:42+08:00">2018-09-15</time>
+              <time title="创建时间：2019-02-17 17:47:07 / 修改时间：17:47:46" itemprop="dateCreated datePublished" datetime="2019-02-17T17:47:07+08:00">2019-02-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-16 19:53:08" itemprop="dateModified" datetime="2018-09-16T19:53:08+08:00">2018-09-16</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1589,14 +1656,671 @@
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/15/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>sql最强大的功能之一就是能在数据检索查询的执行中联结（join）表。在能够有效的使用联结前，必须要了解关系表中以及关系数据库设计的一些基础知识。</p>
+<h2 id="1-关系表"><a href="#1-关系表" class="headerlink" title="1.关系表"></a>1.关系表</h2><p>关系表的设计就是要保证把信息信息分解成多个表，一类数据一个表。各表通过某些常用的值（即关系设计中的关系（relationship）互相关联。<br><strong>外键</strong>：外键为某个表中的一列，它包含另一个表的主键值，定义了两个表之间的关系。<br><strong>维护引用完整性</strong>：重要的是，要理解联结不是物理实体，它在数据库的实际表中不存在。联结由mysql根据需要建立，它存在于查询的执行当中。</p>
+<h2 id="2-创建联结"><a href="#2-创建联结" class="headerlink" title="2.创建联结"></a>2.创建联结</h2><ol>
+<li><p>规定要联结的所有表以及他们如何关联即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT vend_name,prod_name,prod_price FROM vendors,products where </span><br><span class="line">vendors.vend_id=products.vend_id order by vend_name,prod_name;</span><br><span class="line">##products，vendors就是由select联结的两个表。where子句确认他们的联结关系。用第一个id去匹配第二张表中的id。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内部联结<br>目前为止，所使用的联结称为等值联结，它基于两个表之间的相等测试。这种联结也称为内部联结。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select vend_name,prod_name,prod_price from vendors INNERJOIN products ON vendors.vend_id = products.vend_id;</span><br><span class="line">##该语句的from子句组成部分，以inner join 指定。，联结条件用on子句来指定，而不是where。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>联结多个表<br>sql对一条select语句中可以联结的表的数目没有没有限制。创建联结的基本规则也相同。首先列出所有的表，然后定义表之间的关系。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name,vend_name,prod_price, quantity FROM orderitems,products,vendors WHERE</span><br><span class="line"> products.vend_id=vendors.vend_id AND orderitems.prod_id=products.prod_id AND order_num = 20005;</span><br><span class="line"> ##from语句联结3个表，where定义了3个联结条件</span><br></pre></td></tr></table></figure>
+<p><strong>子查询并不是执行复杂的select操作的最有效的方式,可以转换为联结查询，得出相同的结果</strong></p>
+</li>
+</ol>
+<h1 id="创建高级联结"><a href="#创建高级联结" class="headerlink" title="创建高级联结"></a>创建高级联结</h1><h2 id="1-使用表别名"><a href="#1-使用表别名" class="headerlink" title="1.使用表别名"></a>1.使用表别名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT cust_name,cust_contact FROM customers AS C,orders AS O, orderitems AS oi where c.cust_id = o.cust_id AND</span><br><span class="line"> oi.order_num = o.order_num AND prod_id = &apos;TNT2&apos;;</span><br><span class="line">##数据表使用别名</span><br></pre></td></tr></table></figure>
+<h2 id="2-使用不同类型的联结"><a href="#2-使用不同类型的联结" class="headerlink" title="2. 使用不同类型的联结"></a>2. 使用不同类型的联结</h2><ol>
+<li>自联结<br>使用表别名的主要原因之一是能在单条select 语句中不止一次使用相同的表。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT p1.prod_id,p1.prod_name FROM products as p1,products AS p2 where p1.vend_id = p2.vend_id </span><br><span class="line">AND p2.prod_id=&apos;DTNTR&apos;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>自然联结通常作为外部语句用来替代从相同表中检索数据时，使用的子查询语句。</strong></p>
+<p>2.自然联结<br>无论何时对表进行联结，应该至少有一个列出现在不止一个表中（被联结的列）。标准的联结（内部联结，等值联结）返回所有的数据，甚至相同的列多次出现。自然联结排除多次出现，使每个列只返回一次。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT c.*,o.order_num,o.order_date,oi.prod_id,oi.quantity,oi.item_price FROM customers AS c, </span><br><span class="line">orders AS o,orderitems AS oi WHERE c.cust_id=o.cust_id AND oi.order_num = o.order_num AND prod_id = &apos;FB&apos;;</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li><p>外部联结<br>许多联结将一个表中的行与另外一个表中的行相关联。但是有时候需要包含没有关联行的那些行。<br>为了检索所有客户，包括那些没有订单的客户，需要使用外部联结。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT customers.cust_id,orders.order_num FROM customers LEFT  OUTER JOIN orders ON </span><br><span class="line">customers.cust_id = orders.cust_id;</span><br><span class="line">##select 语句使用了关键字 outer join 来指定联结的类型（而不是在where子句中指定），在使用outer join </span><br><span class="line">语法时，还必须使用right 或 left 关键字指定包含其所有行的表。（right指出的是outer join右边的表，left指出的是outer join左边的表）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用带聚集函数的联结<br>检索所有客户，及每个客户所下的订单总数，使用count（）函数代码就可以。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT customers.cust_name,customers.cust_id, count(orders.order_num) as num_ord FROM customers </span><br><span class="line">INNER JOIN orders on customers.cust_id = orders.cust_id GROUP BY customers.cust_id;</span><br><span class="line">##使用inner join 将customers和orders表互相关联。group by 子句按客户分组数据，因此调用count（orders.order_num）</span><br><span class="line">对每个客户的订单计数，将他作为num_ord返回</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT customers.cust_name,customers.cust_id, count(orders.order_num) as num_ord FROM customers </span><br><span class="line">LEFT OUTER JOIN orders on customers.cust_id = orders.cust_id GROUP BY customers.cust_id;</span><br><span class="line">聚集函数也同外部联结来计数，包含没有下订单的客户。</span><br></pre></td></tr></table></figure>
+<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><h2 id="组合查询-1"><a href="#组合查询-1" class="headerlink" title="组合查询"></a>组合查询</h2><ol>
+<li>sql允许执行多个查询（多条select语句），并将结果作为单个查询结果返回。这些组合查询通常称为并（union）或复合查询。<br><strong>两种情况需要使用组合查询</strong></li>
+</ol>
+<ul>
+<li>在单个查询中从不同的表返回类似结构的数据</li>
+<li>对单个表执行多个查询，按单个查询返回数据</li>
+</ul>
+<ol start="2">
+<li>创建组合查询<br>可用union操作符来组合数条sql查询。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT vend_id,prod_id,prod_price FROM products where prod_price &lt;=5 UNION SELECT </span><br><span class="line">vend_id,prod_id,prod_price FROM products where vend_id IN (1002,1001);</span><br><span class="line">##使用关键字union将两个select 语句组合在一起。并把输出结果组合成单个结果集。</span><br><span class="line">在这个简单的例子中，使用union组合查询可能比使用where子句更复杂，但是对于更复杂的过滤条件，或者从多个表中（而不是一个）表</span><br><span class="line">中检索数据，使用union更为简单。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>规则：union必须由两条或以上的select语句组成，语句之间用关键字union分隔。union中的查询必须使用包含相同的列，表达式或聚集函数（不过各列不需要以相同的次序列出），列数据类型必须兼容，必须完全相同。</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/使用函数处理数据及子查询/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/17/使用函数处理数据及子查询/" itemprop="url">
+                  使用函数处理数据及子查询
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-17 17:45:00 / 修改时间：17:46:05" itemprop="dateCreated datePublished" datetime="2019-02-17T17:45:00+08:00">2019-02-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>sql支持利用函数来处理数据。</p>
+<h2 id="使用函数"><a href="#使用函数" class="headerlink" title="使用函数"></a>使用函数</h2><ol>
+<li>用于处理文本串（如删除或充值，转换值为大写或小写）的文本函数。</li>
+<li>用于在数值上进行算术操作。（如返回绝对值，进行代数运算）的数值函数。</li>
+<li>用于处理日期和时间值并从这些值中提取特定的成分（如，返回两个日期之差，检查日期有效性等）的日期和时间函数。</li>
+</ol>
+<h2 id="汇总函数"><a href="#汇总函数" class="headerlink" title="汇总函数"></a>汇总函数</h2><ol>
+<li>确定表中的行数（或者满足某个条件或包含某个特定值的行数）。</li>
+<li>获得表中行组的和。 </li>
+<li><p>找出表列（或所有行或某些特定的行）的最大值、最小值和平均值<br>   <strong>上述例子都需要对表中数据（而不是实际数据本身）汇总</strong><br>   mysql给出了以下5个聚集函数<br>   函数 |说明<br> —–   |    —-<br>   avg（） | 返回某列的平均值<br>   count（） | 返回某列的行数<br>   max（）|返回某列的最大值<br>   min（）    |返回某列的最小值<br>   sum（）|返回某列之和</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select avg(prod_price) as avg_price from products;</span><br><span class="line">查找products表中prod_price列的平均值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>count（）函数进行计数。可以利用count（）确定表中行的数目和符和特定条件的行的数目。</p>
+</li>
+</ol>
+<ul>
+<li>count（）函数有两种用法<ul>
+<li>使用count（*）对表中行的数目进行计数，不管表列中包含的是空值还是非空值。<ul>
+<li>使用count（column）对特定的列中具有值的行进行计数。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select count(*) as num_cust from products;    ##计算表中客户的总数，所有的行。</span><br><span class="line">select count(cust_email) as num_cust from products; 	##计算列cust_email中的数量，非空。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li><p>max（）函数返回指定列中的最大值。max（）要求指定列名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select max(prod_price) as max_price from products;  ##返回products表中最贵的物品价格。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>min（）函数的功能与max（）函数相反。</p>
+</li>
+<li>sum（）函数用来返回指定列的和（总计）。<h2 id="聚集不同的值"><a href="#聚集不同的值" class="headerlink" title="聚集不同的值"></a>聚集不同的值</h2></li>
+</ol>
+<ul>
+<li>以上的5个聚集函数，都可以指定all参数或不给参数（all是默认的）</li>
+<li><p>只包含不同的值，指定distinct（）参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select avg(distinct prod_price) as avg_price from products where vend_Id = 1003; 	##返回不同价格的平均值，忽略掉价格相同的</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组合聚集函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select count(*) as num_items,min(prod_price) as min_price,max(prod_price) as max_price,</span><br><span class="line"> avg(prod_price) as avg_price from products；</span><br></pre></td></tr></table></figure>
+<h2 id="分组数据"><a href="#分组数据" class="headerlink" title="分组数据"></a>分组数据</h2><ol>
+<li><p>创建分组</p>
+<ul>
+<li>分组是在select语句的group by 子句中建立的。</li>
+<li>group by 子句可以包含任意数目的列，这使得能对分组进行嵌套，为数据分组提供更细致的控制<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select vend_id,count(*) as num_prods from products group by vend_id;</span><br><span class="line">##查询每个供应商的产品的数量。返回供应商id和产品的数量</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>过滤分组</p>
+</li>
+</ol>
+<ul>
+<li>where过滤的是行，having过滤的是分组。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select cust_id,count(*) as orders from orders group by cust_id having count(*) &gt;=2;</span><br><span class="line">##查询两个订单以上。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>HAVING和where的差别：where在数据分组前进行过滤，having在数据分组后进行过滤</strong></p>
+<ul>
+<li>同时使用where和having过滤的查询语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select vend_id,count(*) as num_prods from products where prod_price &gt;=10 group by vend_id having count(*) &gt;=2; </span><br><span class="line">##返回具有2个及以上、价格大于等于10的产品供应商。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>分组和排序</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> select order_num,sum(quantity*item_price) as ordertotal from orderitems </span><br><span class="line"> group by order_num having sum(quantity*item_price)&gt;= 50; 	##检索总计订单价格大于等于50的订单号和总计的价格</span><br><span class="line">select order_num,sum(quantity*item_price) as ordertotal from orderitems </span><br><span class="line"> group by order_num having sum(quantity*item_price)&gt;= 50 order by ordertotal；	## 按照总计价格排序</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="select语句的顺序"><a href="#select语句的顺序" class="headerlink" title="select语句的顺序"></a>select语句的顺序</h2><table>
+<thead>
+<tr>
+<th>子句</th>
+<th>说明</th>
+<th>是否必须使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  SELECT</td>
+<td>要返回的列或表达式</td>
+<td>是</td>
+</tr>
+<tr>
+<td>  FROM</td>
+<td>从中检索数据的表</td>
+<td>仅在从表选择数据时使用</td>
+</tr>
+<tr>
+<td>  WHERE</td>
+<td>行级过滤</td>
+<td>否</td>
+</tr>
+<tr>
+<td>  GROUP BY</td>
+<td>分组说明</td>
+<td>仅在按组计算聚集时使用</td>
+</tr>
+<tr>
+<td>  HAVING</td>
+<td>组级过滤</td>
+<td>否</td>
+</tr>
+<tr>
+<td>  ORDER BY</td>
+<td>输出排序顺序</td>
+<td>否</td>
+</tr>
+<tr>
+<td>  LIMIT</td>
+<td>要检索的行数</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><ol>
+<li>迄今为止，所使用的select语句都是都是简单的查询，就是指从一个表中查询出数据。<br><strong>子查询就是将查询结果作为下一个查询查询的过滤条件来使用。（跨表操作）</strong></li>
+</ol>
+<ol start="2">
+<li>作为计算字段使用子查询<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select name,(select count(*) from &quot;MES&quot;.&quot;EMS&quot;.&quot;BREAKER&quot; where  &quot;MES&quot;.&quot;EMS&quot;.&quot;BREAKER&quot;.st_id = </span><br><span class="line">&quot;MES&quot;.&quot;EMS&quot;.&quot;SUBSTATION&quot;.id）as count_breakers from &quot;MES&quot;.&quot;EMS&quot;.&quot;SUBSTATION&quot;;</span><br><span class="line">##</span><br><span class="line">select cust_name,cust_state,(select count(*) from orders where orders.cust_id=customers.cust_id) as orders </span><br><span class="line">from customers order by cust_name;</span><br><span class="line">##此条select语句对customers表中的每个客户返回3列。orders 是一个计算字段，它是圆括号中的子查询建立的。该子查询对检索的每个</span><br><span class="line">客户执行一次。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>相关子查询</strong>：设计外部查询的子查询。这种类型的子查询称为相关子查询。任何时候只要列名可能有多义性，就必须使用这种语法（表名和列名有一个句点隔开）</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/创建字段/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/17/创建字段/" itemprop="url">
+                  创建字段
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-17 17:43:01 / 修改时间：17:43:56" itemprop="dateCreated datePublished" datetime="2019-02-17T17:43:01+08:00">2019-02-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="计算字段"><a href="#计算字段" class="headerlink" title="计算字段"></a>计算字段</h1><h2 id="计算字段-1"><a href="#计算字段-1" class="headerlink" title="计算字段"></a>计算字段</h2><ol>
+<li><strong>含义</strong> 储存在数据库中的数据一般不是应用程序所需要的格式。计算字段并不实际存在于数据库表中，计算字段是运行在select语句内创建的。==字段==基本上就是列的意思。</li>
+<li><p><strong>拼接字段</strong>  把两个列拼起来使用concat（）函数。(mysql的不同之处，多数的数据库使用+或者||lai pinjie 而mysql使用concat（）函数)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select concat（vend_name,&apos;(&apos;,vend_country,&apos;)&apos;） from vendors order by vend_name;</span><br><span class="line">select concat(Rtrim(vend_name,&apos;(&apos;,Rtrim(vend_country),&apos;)&apos;)  from vendors order by vend_name;</span><br><span class="line">##使用函数Rtrim删除数据右侧的空格</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用别名</strong> 别名用as关键字赋予。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select concat(Rtrim(vend_name),&apos;(&apos;,Rtrim(vend_contry),&apos;)&apos; as vend_title </span><br><span class="line">from vendors order by  vend_name;</span><br><span class="line">##使用关键字as创建了一个包含指定计算的名为vend_title的列名。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>执行算数计算</strong></p>
+<p>算数操作符 | 说明<br>—–|——-<br>+| 加<br>-|减<br>*|乘<br>/|除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select prod_id,quantity,item_price,quantity*item_price as expanded_price from orderitems </span><br><span class="line">where orer_num = 20005;</span><br><span class="line">##quantity*item_price 算术计算，expanded_price为as创建出来的计算字段</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="使用数据处理函数"><a href="#使用数据处理函数" class="headerlink" title="使用数据处理函数"></a>使用数据处理函数</h2><ol>
+<li><strong>函数</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left（）</td>
+<td>返回串左边的字符</td>
+</tr>
+<tr>
+<td>lenth（）</td>
+<td>返回串的长度</td>
+</tr>
+<tr>
+<td>Locate（）</td>
+<td>找出串的一个子串</td>
+</tr>
+<tr>
+<td>Lower（）</td>
+<td>将串转换为小写</td>
+</tr>
+<tr>
+<td>Ltrim（）</td>
+<td>删除串左边的空格</td>
+</tr>
+<tr>
+<td>Right（）</td>
+<td>返回串右边的字符</td>
+</tr>
+<tr>
+<td>Rtrim（）</td>
+<td>去掉串右边的空格</td>
+</tr>
+<tr>
+<td>Upper（）</td>
+<td>将串转换为大写</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select vend_name,upper(vend_name) as vend_anme_upcase from vendors;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><strong>数据表中有日期和时间</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AddDate( )</td>
+<td>增加一个日期（天、周等）</td>
+</tr>
+<tr>
+<td>AddTime( )</td>
+<td>增加一个时间（时、分等）</td>
+</tr>
+<tr>
+<td>Curdate( )</td>
+<td>返回当前日期</td>
+</tr>
+<tr>
+<td>Curtime（）</td>
+<td>返回当前时间</td>
+</tr>
+<tr>
+<td>Date（）</td>
+<td>返回日期时间的日期部分</td>
+</tr>
+<tr>
+<td>DateDiff（）</td>
+<td>计算两个日期之差</td>
+</tr>
+<tr>
+<td>Date_Add( )</td>
+<td>高度灵活的日期运算函数</td>
+</tr>
+<tr>
+<td>Date_Format( )</td>
+<td>返回一个格式化的日期</td>
+</tr>
+<tr>
+<td>Day（）</td>
+<td>返回一个日期的天数部分</td>
+</tr>
+<tr>
+<td>DayofWeek</td>
+<td>对于一个日期，返回对应的星期几</td>
+</tr>
+<tr>
+<td>Hour（）</td>
+<td>返回一个时间的小时部分</td>
+</tr>
+<tr>
+<td>Minute（）</td>
+<td>返回一个时间的分钟部分</td>
+</tr>
+<tr>
+<td>Month（）</td>
+<td>返回一个日期的月份部分</td>
+</tr>
+<tr>
+<td>Now( )</td>
+<td>返回当前日期和时间</td>
+</tr>
+<tr>
+<td>Second（）</td>
+<td>返回一个时间的秒部分</td>
+</tr>
+<tr>
+<td>Time（）</td>
+<td>返回一个日期时间的时间部分</td>
+</tr>
+<tr>
+<td>Year（）</td>
+<td>返回一个日期的年份部分</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select cust_id,order_num from orers where Date(order_date) = &apos;2005-09-01&apos;; ##返回日期时间的日期部分</span><br><span class="line">## mysql支持的首选日期格式为yyyy-mm-dd</span><br><span class="line">select cust_id,order_num from orders where date(order_date） between ‘2005-09-01’ and ‘2005-09-30’；</span><br><span class="line">select cust_id，order_num from orders where Year(order_date) = 2005 and Month(order_date)=9;</span><br></pre></td></tr></table></figure>
+<p>常用数值处理函数</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abs（）</td>
+<td>返回一个数的绝对值</td>
+</tr>
+<tr>
+<td>Cos（）</td>
+<td>返回一个角度的余弦</td>
+</tr>
+<tr>
+<td>Exp（）</td>
+<td>返回一个数的指数值</td>
+</tr>
+<tr>
+<td>Mod（）</td>
+<td>返回除操作的余数</td>
+</tr>
+<tr>
+<td>Pi（）</td>
+<td>返回圆周率</td>
+</tr>
+<tr>
+<td>Rand（）</td>
+<td>返回一个随机数</td>
+</tr>
+<tr>
+<td>Sin（）</td>
+<td>返回一个角度的正弦</td>
+</tr>
+<tr>
+<td>Sqrt（）</td>
+<td>返回一个数的平方根</td>
+</tr>
+<tr>
+<td>Tan（）</td>
+<td>返回一个角度的正切</td>
+</tr>
+</tbody>
+</table>
+
+          
         
       
     </div>
@@ -1636,6 +2360,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1676,7 +2404,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1693,7 +2421,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1718,7 +2448,25 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

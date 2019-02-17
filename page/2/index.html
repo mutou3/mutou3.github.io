@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="爱自由">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="爱自由">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="爱自由">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>爱自由</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+  <a href="https://github.com/mutou3" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">爱自由</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tag"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+    <a href="/schedule/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+    <a href="/sitemap.xml" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />站点地图</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/17/正则表达式/" itemprop="url">
+                  正则表达式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-17 17:40:30 / 修改时间：17:42:34" itemprop="dateCreated datePublished" datetime="2019-02-17T17:40:30+08:00">2019-02-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="正则表达式介绍"><a href="#正则表达式介绍" class="headerlink" title="正则表达式介绍"></a>正则表达式介绍</h2><ol>
+<li><strong>正则表达式用法</strong><br>正则表达式：用正则表达式语言来建立，正则表达式语言是一种特殊的语言，与任意语言一样，正则表达式具有特殊的语法和指令；<br>正则表达式是用来匹配文本的特殊的串（字符集合）。如果你想从一个文本中提取电话号码，可以使用正则表达式。如果你需要查找名字中间有数字的所有文件，文本块中找到所有重复的单词，替换一个页面中的所有URL为这些URL的实际HTML连接，也是用正则表达式。正则表达式是用来匹配文本的特殊的串（字符集合）。如果你想从一个文本中提取电话号码，可以使用正则表达式。如果你需要查找名字中间有数字的所有文件，文本块中找到所有重复的单词，替换一个页面中的所有URL为这些URL的实际HTML连接，也是用正则表达式。</li>
+<li><strong>使用Mysql正则表达式</strong><br>正则表达式的作用是匹配文本，将一个模式（正则表达式）与一个文本串进行比较。mysql用where子句对正则表达式提供初步支持，允许你指定正则表达式过滤select检索出的数据。 </li>
+<li><p><strong>基本字符匹配</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products where prod_name regexp &apos;1000&apos; order by prod_name;</span><br><span class="line">##关键字like 被regexp 替换，告诉mysql后面跟的是==正则表达式==(与文字正文1000匹配的一个正则表达式）</span><br><span class="line">select prod_name from products where prod_name regexp &apos;.000&apos; order by  prod_name;</span><br><span class="line">这里使用了正则表达式.000 。.是正则表达式中的一个特殊的字符。它表示匹配任意个字符。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>like和regexp之间的一个重要差别</strong>：like匹配这个列，必须一样才能返回相应的，而regexp在列的值内进行比较，如果被匹配的文本在列值中出现，regexp将会找到它，相应的行将会被返回。<strong>一个匹配整个列，一个匹配列中的值进行比较</strong><br>正则表达式不区分大小写，如果要区分的话，可以使用关键字BINARY，如where prod_name regexp BINARY ‘JetPack .000’<br>5.<strong>进行or匹配</strong><br>搜索两个串之一（或者），使用管道符 |</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products where prod_name regexp &apos;1000|2000&apos; order by prod_name;</span><br><span class="line">##语句中使用了正则表达式1000|2000. | 为正则表达式的OR操作福，同时可以使用两个以上的or条件，例如：</span><br><span class="line">&apos;100|2000|3000&apos; 将匹配成1000或2000或3000。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>匹配几个字符之一</strong><br>可通过指定任意组用[]括起来的字符来完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products where prod_name regexp &apos;[123] Ton&apos; order by prod_name;</span><br><span class="line">##这里使用了正则表达式[123] Ton 。[123]定义一组字符，它的意思是匹配1或者2或者3，因此1 ton 和2 ton 都匹配发挥，因为不区分大小写，所以Ton返回了ton。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符集也可以被否定，即，匹配出指定字符集外的任何东西。在集合的开头出添加一个 ^,及 [^123],表示匹配除开1,2,3之外的任何东西。</p>
+</li>
+<li><strong>匹配范围</strong><br>集合可以用来匹配一个或多个字符。[123456789]等于[1-9]也可以用来匹配任意字母字符[a-z].</li>
+<li><strong>匹配特殊字符</strong><br>正则表达式语言由具有特定含义的特殊字符构成。为匹配特殊字符，必须用\为前导。转移符。\-表示查找-，\.表示查找.。</li>
+<li><p><strong>匹配支付类</strong></p>
+<p>操作符  |    说明<br>——–    |——-<br>[:alnum:]| 任意字母和数字（同[a-zA-Z0-9]）<br>[:alpha:]|任意字符（[a-zA-Z]）<br>[:blank:]|空格和制表（同[\t]）<br>[:digit:]|任意数字[同0-9]<br>[:graph:]|与[:print:]相同，但不包含空格<br>[:lower:]|任意小写字母[a-z]<br>[:print:]|任意可打印字符<br>[:space:]|包括空格在内的任意空白字符<br>[:upper:]|热议大写字母（同[A-Z]）</p>
+</li>
+<li><strong>匹配多个实例</strong><br>以上的正则表达式，都表示匹配单词出现，如果需要多次匹配，则需要使用重复元字符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>0个或者多个匹配</td>
+</tr>
+<tr>
+<td>+</td>
+<td>1个或多个匹配（等于{1，}）</td>
+</tr>
+<tr>
+<td>？</td>
+<td>0个或多个匹配（{0,1}）</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>指定数目的匹配</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>不少于指定数目的匹配</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>匹配数目的范围（不超过255个）</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products </span><br><span class="line">where prod_name regexp &apos;\\([0-9] sticks?\\)&apos;</span><br><span class="line">order by prod_name;</span><br><span class="line">##正则表达式\\([0-9] sticks?\\)  sticks?匹配stick和sticks（s后面的问号是s可选，因为？匹配它前面的任何字</span><br><span class="line">符出现0次或者1次出现）。使用问号可以轻松匹配出stick或者sticks。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from produts </span><br><span class="line">where prod_name regexp &apos;[[:digit:]]&#123;4&#125;&apos;</span><br><span class="line">##[:digit:]代表任意数字，因而它为数字的一个集合.&#123;4&#125;确切的要求它前面的字符（任意数字）出现4次，所以该表达式表示连在一起的任意4个数字。</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>定位符<br>以上都是匹配一个字符串任意位置的文本。为了匹配指定位置的文本，需要使用定位符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>文本的开始</td>
+</tr>
+<tr>
+<td>$</td>
+<td>文本的结尾</td>
+</tr>
+<tr>
+<td>[[:&lt;:]]</td>
+<td>词的开始</td>
+</tr>
+<tr>
+<td>[[:&gt;:]]</td>
+<td>词的结尾</td>
+</tr>
+</tbody>
+</table>
+<p><code>`</code>mysql<br>select prod_name from products<br>where prod_name regexp ‘^[0-9\.]’<br>order by  prod_name;</p>
+<p>##^表示从字符串的开头，匹配第一个字符为数字或者点的情况下返回结果</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/Mysql简介/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/17/Mysql简介/" itemprop="url">
+                  Mysql简介
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-17 17:37:06 / 修改时间：17:39:26" itemprop="dateCreated datePublished" datetime="2019-02-17T17:37:06+08:00">2019-02-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Mysql简介"><a href="#Mysql简介" class="headerlink" title="Mysql简介"></a>Mysql简介</h2><p>这里开始学习sql语句</p>
+<ol>
+<li><strong>登录到数据MySql</strong><br>在具有可供使用的MySql DBMS和客户机软件之后，要求在能执行命令个之前先登录到DBMS。MySql在内部保存有自己的用户列表，并且把每个用户和各种权限关联在一起。</li>
+</ol>
+<p>在最初安装mysql时，通常会创建一个管理登录，一般为root和一个密码。</p>
+<p>为了连接到MySql，需要以下信息：<br>1、主机名（计算机名）–如果连接到本地Mysql服务器，为localhost。<br>2、端口（如果使用默认端口3306之外的端口）<br>3、一个合法的用户名<br>4、用户口令</p>
+<ol start="2">
+<li><strong>选择数据库</strong><br>在你最连接到数据库时，并没有任何打开的数据库功能使用，在你能执行数据库操作前，需要选择一个数据库。<br>使用关键字==use==，选择数据库crashcourse<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">USE crashcourse;</span><br><span class="line">输出：</span><br><span class="line">Database changed</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注：必须使用use先打开数据库，才能读取其中的数据</p>
+<ol start="3">
+<li><strong>了解数据库和表</strong><br>查看数据库列表,使用关键字show，将显示所有的数据库。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">SHOW DATABASES;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>查看数据库内，包含表的列表同样使用关键字，将显示所有的数据库的表的列表。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables；    ##显示数据库所有的表列</span><br></pre></td></tr></table></figure></p>
+<p>show也可以用来显示表列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">show columns from customers;   ##显示customers表中的所有列</span><br><span class="line">上面语句等于：</span><br><span class="line">describe customers;</span><br></pre></td></tr></table></figure></p>
+<p>所支持的其他show语句还有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">show status; 		##显示广泛的服务器状态信息；</span><br><span class="line">show creat database 和 show create table;	##分别用来显示创建特定数据库或表的Mysql语句；</span><br></pre></td></tr></table></figure></p>
+<h2 id="检索数据"><a href="#检索数据" class="headerlink" title="检索数据"></a>检索数据</h2><ol>
+<li><strong>select 语句</strong><br>检索单个列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products;	##从products表中检索一个名为prod_name的列；该检索出来的结果是为排序的数据</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>==注意多条sql语句必须以分号（；）分隔，sql语句不区分大小写==<br>检索多个列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select prod_id,prod_name,prod_price from products;	##从products表中检索prod_name，prod_price,prod_id三列数据</span><br></pre></td></tr></table></figure></p>
+<p>检索所有的列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from produts;		##  *表示从检索products表中的所有数据；</span><br></pre></td></tr></table></figure></p>
+<p>检索不同的行<br>select 语句返回所有的匹配，中就可能包好重复的记录，要返回不重复的记录徐亚使用更关键值distinct<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct vend_id from products;		##关键字distinct表示只返回vend_id列中不同的记录</span><br></pre></td></tr></table></figure></p>
+<p>限制结果<br>select 语句返回所有的行，他们可能是指定表中的每个行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products limit 5;		##返回prod_name列的前5行。</span><br><span class="line">select prod_name from products limit 5,5;		##返回从行5开始的5行。第一个数为开始的位置，第二个数为要检索的行数。</span><br></pre></td></tr></table></figure></p>
+<p>使用完全限定的表名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select products.prod_name from crashcourse.products;		##指定表名，数据库名</span><br></pre></td></tr></table></figure></p>
+<h2 id="排序检索数据"><a href="#排序检索数据" class="headerlink" title="排序检索数据"></a>排序检索数据</h2><p><strong>排序数据</strong>  关键字order by<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products order by prod_name;	##检索prod_name列，并对其按字母顺序进行排序  </span><br><span class="line"></span><br><span class="line">select prod_id,prod_price,prod_name from products order by prod_price,prod_name;		##首先按照价格排序，在价格一样</span><br><span class="line">的情况下再对prod_name按照字母顺序排列；</span><br></pre></td></tr></table></figure></p>
+<p><strong>指定排序方向</strong> 关键字desc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_id,prod_price,prod_name from products order by prod_price desc;  		##关键字desc指定一只母顺序方向排序；</span><br><span class="line">select prod_id,prod_price,prod_name from products order by prod_price desc,prod_name; ##先按降序对prod_price排序，在prod_price相同的情况下对prod_name排序</span><br></pre></td></tr></table></figure></p>
+<p>==desc只对位于其前面的列名起作用==，对于prod_name则不起作用。如果要对多个列进行降序排序，必须对每一个列都指定desc关键字<br><strong>使用order by 和limit组合可以查询最值</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select prod_price from products order by prod_price limit 1;  ##检索出prod_pice 列中最大的值</span><br></pre></td></tr></table></figure></p>
+<h2 id="过滤数据"><a href="#过滤数据" class="headerlink" title="过滤数据"></a>过滤数据</h2><p><strong>在select语句中，数据根据where子句中指定的搜索条件来进行过滤</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select prod_name,prod_price from products where prod_price = 2.5;		##检索prod_price=2.5的记录；</span><br></pre></td></tr></table></figure></p>
+<p><strong>wehre子句的操作符号</strong><br>操作符    |说明<br>——– | ——-<br>=|等于<br>&lt;&gt;|不等于<br>！=|不等于<br>&lt;|小于<br>&lt;=|小于等于</p>
+<blockquote>
+<p>|大于<br>=|大于等于<br>between|在指定的两个值之间<br><strong>检查单个值</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select prod_name,prod_price from products where prod_name =&apos;fuses&apos;;	##返回prod_name为fuses的一行</span><br><span class="line">select prod_name,prod_price from products where prod_price &lt;10;	##返回prod_price小于10 的行</span><br><span class="line">select vend_id,prod_name from products where vend_id &lt;&gt;1003; 	##返回vend_id不等于1003的行 </span><br><span class="line">select vend_id,prod_name from products where vend_id != 1003;	##返回vend_id不等于1003的行</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><strong>范围值检查</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_name,prod_price from products where prod_price between 5 and 10;</span><br><span class="line">##检索prod_price为5到10之间的记录，包括本身。</span><br></pre></td></tr></table></figure></p>
+<p><strong>空值检查</strong><br>在创建表的时候，表设计人员可以指定其中的列是否可以不包含值，一个列不包含值时，称其为包含空值NULL。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select prod_name from products where prod_price is null;		##返回价格为空的行，而不是价格为0的记录。</span><br></pre></td></tr></table></figure></p>
+<h2 id="数据过滤"><a href="#数据过滤" class="headerlink" title="数据过滤"></a>数据过滤</h2><p><strong>组合where子句</strong><br>Mysql允许给出多个where子句。这些子句可以用两种方式使用：以and子句或or子句的方式使用。</p>
+<ol>
+<li><p>and操作符<br>为了通过不止一个列进行过滤，可使用AND操作符给where子句附加条件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_id,prod_price,prod_name from products where vend_id =1003 and prod_price &lt;=10;  ##and用在where子句的关键字，</span><br><span class="line">用来指示满足所有给定条件的行。同时满足两个条件。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>or操作符<br>or操作符与and操作符不同，它指示mysql检索匹配任意一条件的行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_name,prod_price from products where vend_id =1002 or vend_id =1003;  ##or用在where后面，表示</span><br><span class="line">满足任意条件都匹配一行。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>or操作符和and操作符同时存在的计算次序<br>where可包含任意数目的and和or操作符。允许两者结合以进行复杂和高级的过滤。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_name,prod_price from products where vend_id =1002 or vend_id=1003 and prod_price &gt;=10;</span><br><span class="line">##sql在处理or操作数的时候，优先处理and操作符。 所以先，匹配vend_id =1003的并且价格大于等于10的行，之后再匹配vend_id=1002，的行。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>in操作符<br>圆括号在where子句中，还有另外一种用法。IN操作符用来指定条件范围，范围中的每个条件都可以进行匹配。IN取合法值的由逗号分隔的清单，全都括在圆括号中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select prod_name,prod_price from products where vend_id IN (1002,1003) order by prod_name;		##此select语句检索供应商1002和1003制造的所有产品。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>not in not操作符有且只有一个功能，那就是否定它之后跟的任何条件。<br>==此时看，in操作符，和or操作符具有相同的功能==   ==in操作符的执行速度较快于or操作符==</p>
+<h2 id="用通配符进行过滤"><a href="#用通配符进行过滤" class="headerlink" title="用通配符进行过滤"></a>用通配符进行过滤</h2></li>
+<li>LIKE操作符<br><strong>通配符</strong>：用来匹配值的一部分的特殊字符。为了在子句中使用通配符，必须使用LIKE操作符。<br><strong>百分号通配符</strong>：%表示任何字符出现任意次数。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select prod_id,prod_name from products where prod_name LIKE &apos;jet%&apos;;		##搜索所有的一jet开头的name。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>下划线通配符</strong>：只匹配单个字符而不是多个字符。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/linux基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/16/linux基础/" itemprop="url">
+                  linux学习
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-16 23:34:29" itemprop="dateCreated datePublished" datetime="2019-02-16T23:34:29+08:00">2019-02-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-17 00:02:39" itemprop="dateModified" datetime="2019-02-17T00:02:39+08:00">2019-02-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><h3 id="分区"><a href="#分区" class="headerlink" title="分区"></a><strong>分区</strong></h3><p>hd 硬盘  hda hdb hdc 表示abc 三个硬盘<br>sata 硬盘  sd  sda sdb sdc 表示abc 三个硬盘<br>hda1 hda2 hda3 表示第一个硬盘的1、2、3分区<br>sda1 sda2 sda3 表示第一个硬盘的1、2、3分区</p>
+<h3 id="挂载点："><a href="#挂载点：" class="headerlink" title="挂载点："></a><strong>挂载点：</strong></h3><p>windows 分区，必须给每一个分区分配一个盘符；才能够看到及使用该分区。</p>
+<p>在linux下自由/可以当盘符，所以其他的分区，都得在/下创建文件。挂载点就是/下面创建的路径。</p>
+<h3 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a><strong>网卡</strong></h3><p>linux网卡，使用eth来表示，windows下使用本地连接来表示。</p>
+<p>一台电脑装多个操作系统的话，系统不能安装到同一个分区下。window系统只能装在主分区里面。</p>
+<p>在linux里面以点号开头的，都是隐藏文件。</p>
+<h3 id="图形化界面与命令行切换"><a href="#图形化界面与命令行切换" class="headerlink" title="图形化界面与命令行切换"></a><strong>图形化界面与命令行切换</strong></h3><p>图形化界面同命令行的切换，linux一般有七个控制台，1到6个都是字符界面，第7个是图形化界面。ctl + alt + f1~f6，切换控制台。 ctl +  alt + f7 ，图形化界面。  控制台又称之为入口，通过这七个控制台都可以登入到系统。  使用命令tty 可以查看当前所在第几个控制台。</p>
+<h3 id="命令的执行"><a href="#命令的执行" class="headerlink" title="命令的执行"></a><strong>命令的执行</strong></h3><p>linux中命令的格式。 命令 -选项… 参数  （选项表示如何执行该命令）（-后面跟的是选项）  ls -h  (-h 选项以能看懂的方式显示大小)（当选项是一个单词整体的时候，前面需要两条 杠 –）<br>在命令行执行命令时候的声音执行命令  modprobe -r pcspkr，root用户下。</p>
+<p>快捷键：ctl +a 光标跳到本行的开头。 ctl +e 光标跳到本行末尾。再按住左右建，一个单词一个单词的跳 ctl +u 光标位置删除到本行的开头  ctl +k 当前光标一直删除到本行的结尾。<br>执行命令：touch xx 后再执行命令 ^xx ^yy，表示重新执行前一个命令，并将xx替换成yy执行一遍  相当于执行了一遍：touch yy。<br>ctl +shift +t 打开新的终端，ctl +shift +pageup或者+pagedown切换终端。</p>
+<p>命令<strong>whatis +命令</strong>  该命令用来解释该命令有什么作用，显示不同的章节<br>–help  告诉具体的用法。若选项或文件用[]括起来的话，表示该选项或者文件可以省略。  …表示可以有多个选项或者文件</p>
+<p><strong>小写的n</strong>从上往下查找，<strong>大写的N</strong>表示从下往上查找。 <strong>/^des</strong>该命令表示查找开头为des的单词，尖括号表示开头。</p>
+<p>若某个命令只能记住一部分，可以使用 命令：<strong>man -k</strong>能记住的部分，此后将会显示全部包含该部分的命令。<br>man 还可以查询配置文件的使用方法。帮助文档存放在/usr/shoare/doc里面。</p>
+<p>man +命令  查看命令使用方法，默认的是显示第一章。。若要查询别的章节使用：man 章节 +命令</p>
+<p><strong>文本编辑：gedit 图形化编辑。</strong></p>
+<h3 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a><strong>运行级别</strong></h3><p><strong>运行级别</strong>    不同的运行级别里面，运行的服务不一样。<br>linux中 /etc/init.d 或者 rc.d/inid.d   然后运行的级别就是在rc.d里面的7个不同的级别。不同的级别就运行对应的rc5.d,里面的服务，，服务以K开头的表示该服务停止运行。  查看运行级别的命令：<strong>runlevel</strong><br>图形化界面在级别5.<br>级别1单用户模式。<br>级别3 存文本模式，在存文本级别下可以手动打开图形界面，执行命令：startx，虽然启动了图形化界面，但是运行级别未改变。<br>级别6 重启</p>
+<p>每个级别进入系统都有7个控制台。</p>
+<p><strong>忘记root密码</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/MySql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/21/MySql/" itemprop="url">
+                  MySql基础
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-21 23:34:29" itemprop="dateCreated datePublished" datetime="2018-09-21T23:34:29+08:00">2018-09-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-22 00:35:06" itemprop="dateModified" datetime="2018-09-22T00:35:06+08:00">2018-09-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MySql/" itemprop="url" rel="index"><span itemprop="name">MySql</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h2><p>数据库是：一个以某种有组织的方式存储的数据集合。<br>数据库（database）保存有组织的数据容器（通常是一个文件或是一组文件）。<br>数据库软件应称为DBMS（数据库管理系统）。<br>数据库是通过DBMS创建和操作的容器。（用户并不直接访问数据库，而是通过DBMS，他替你访问数据库）</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><h4 id="1-表（table）"><a href="#1-表（table）" class="headerlink" title="1. 表（table）"></a>1. <strong>表（table）</strong></h4><p>表是一种结构化的文件，可以用来存储某种特定类型的数据，某种特定类型数据的结构化清单。表名的唯一性取决于多个因素，如数据库名和表名等的结合。相同的数据库中不能两次使用相同的表名，但是在不同的数据库中却可以使用相同的表名。</p>
+<h4 id="2-模式（schema）"><a href="#2-模式（schema）" class="headerlink" title="2. 模式（schema）"></a>2. <strong>模式（schema）</strong></h4><p>描述表的这组信息就是所谓的模式,模式可以用来描述数据库中的特定的表以及整个数据库。关于数据库和表的布局及特性的信息。</p>
+<h4 id="3-列（column）和数据类型"><a href="#3-列（column）和数据类型" class="headerlink" title="3. 列（column）和数据类型"></a>3. <strong>列（column）和数据类型</strong></h4><p>列： 表中的一个字段。所有的表都是由一个或者多个列组成的。<br>数据类型： 说容许的数据类型。每个表都有相应的数据类型，它限制（或容许）该列中存储的数据。<br>数据类型限制可存储在列中的数据类型。在创建表时必须对数据类型给予特别的关注。</p>
+<h4 id="4-行（row）"><a href="#4-行（row）" class="headerlink" title="4. 行（row）"></a>4. <strong>行（row）</strong></h4><p>表中的数据是按照行储存的，所保存的每个记录存储在自己的行内。 表中的行数为记录的总数。你可能在听到用户在提到行（row）时称其为数据库的记录（record）。</p>
+<h4 id="5-主键（primary-key）"><a href="#5-主键（primary-key）" class="headerlink" title="5. 主键（primary key）"></a>5. <strong>主键（primary key）</strong></h4><p>表中的每一行都应该有可以唯一标识自己的一列（或一组）。其值能够唯一区分表中每个行。唯一标识表中每行的这个列（或这组列）称为主键。<br><code>表中的任何列都可以作为主键，他只要满足一下条件</code><br>        (1.)任意两行都不具有相同的主键值  (2.)每个行都必须具有一个主键值（主键列不允许NULL值）。 </p>
+<h3 id="什么是SQL"><a href="#什么是SQL" class="headerlink" title="什么是SQL"></a>什么是SQL</h3><p>1.<strong>sql</strong><br>sql是一种专门用来与数据库通信的语言</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/16/测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/16/测试/" itemprop="url">
+                  测试
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-16 22:51:56" itemprop="dateCreated datePublished" datetime="2018-09-16T22:51:56+08:00">2018-09-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-17 00:05:57" itemprop="dateModified" datetime="2018-09-17T00:05:57+08:00">2018-09-17</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>你就可以看到你的博客了，今天学习了hexo+github搭建个人免费博客。刚开始是完全不知道怎么弄，就是这一点点的在网上查资料，然后慢慢摸索，直到现在大概用了6/7个小时左右几乎，就搭建好了自己的博客，基本的用法基本上已经能够使用呢，就是还有些细节问题还需要进一步的，学习。还需要进一步的完善改进自己的博客的样式，能让他达到完美的状态。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/16/测试/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/16/my-first-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/16/my-first-blog/" itemprop="url">
+                  my-first_blog
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-16 19:26:07 / 修改时间：19:33:13" itemprop="dateCreated datePublished" datetime="2018-09-16T19:26:07+08:00">2018-09-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          时间已经过去很多了，还有多少时间可以去浪费呢
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/16/my-first-blog/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="The Answer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱自由">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/15/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-15 22:30:42" itemprop="dateCreated datePublished" datetime="2018-09-15T22:30:42+08:00">2018-09-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-16 19:53:08" itemprop="dateModified" datetime="2018-09-16T19:53:08+08:00">2018-09-16</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/15/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">The Answer</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">The Answer</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 --> 
+<script type="text/javascript" src="/js/src/love.js"></script>
